@@ -1,0 +1,6 @@
+framework module testSwiftFramework {
+  umbrella header "testSwiftFramework.h"
+
+  export *
+  module * { export * }
+}

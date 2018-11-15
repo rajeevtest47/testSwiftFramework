@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C4022F6219DEB09001BC910 /* postbuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = postbuild.sh; sourceTree = "<group>"; };
 		6CC092CB219576A500D0CE7F /* testSwiftFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testSwiftFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CC092CE219576A500D0CE7F /* testSwiftFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testSwiftFramework.h; sourceTree = "<group>"; };
 		6CC092CF219576A500D0CE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,9 +95,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C4022F5219DEACF001BC910 /* BuildScripts */ = {
+			isa = PBXGroup;
+			children = (
+				6C4022F6219DEB09001BC910 /* postbuild.sh */,
+			);
+			path = BuildScripts;
+			sourceTree = "<group>";
+		};
 		6CC092C1219576A500D0CE7F = {
 			isa = PBXGroup;
 			children = (
+				6C4022F5219DEACF001BC910 /* BuildScripts */,
 				6CC092CD219576A500D0CE7F /* testSwiftFramework */,
 				6CC092D8219576A500D0CE7F /* testSwiftFrameworkTests */,
 				6CC092FF2195777600D0CE7F /* iOSTargetTests */,
@@ -175,6 +185,7 @@
 				6CC092C7219576A500D0CE7F /* Sources */,
 				6CC092C8219576A500D0CE7F /* Frameworks */,
 				6CC092C9219576A500D0CE7F /* Resources */,
+				6C4022F7219DEB93001BC910 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -344,6 +355,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C4022F7219DEB93001BC910 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/BuildScripts/postbuild.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6CC092C7219576A500D0CE7F /* Sources */ = {
